@@ -11,7 +11,7 @@ import SwiftUI
 struct Weather_accueApp: App {
     var body: some Scene {
         WindowGroup {
-            WelcomeScreen()
+            ContentView()
         }
     }
 }
