@@ -2,12 +2,12 @@
 //  ContentView.swift
 //  Weather-accue
 //
-//  Created by MacBookPro on 29/03/1946 Saka.
+//  Created by Bhavin Pathak on 19/06/2024
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct WelcomeScreen: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,6 +21,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WelcomeScreen()
     }
 }

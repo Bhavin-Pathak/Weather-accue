@@ -2,7 +2,7 @@
 //  Weather_accueApp.swift
 //  Weather-accue
 //
-//  Created by MacBookPro on 29/03/1946 Saka.
+//  Created by Bhavin Pathak on 19/06/2024
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct Weather_accueApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeScreen()
         }
     }
 }
