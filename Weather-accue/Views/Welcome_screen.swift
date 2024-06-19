@@ -25,7 +25,7 @@ struct Welcome_screen: View {
                 
             }
             .multilineTextAlignment(.center)
-           
+            
             LocationButton(.shareCurrentLocation){
                 locationManager.requestLocation()
             }

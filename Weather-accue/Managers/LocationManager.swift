@@ -11,7 +11,7 @@ import CoreLocation
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-
+    
     let manager = CLLocationManager()
     
     @Published var location: CLLocationCoordinate2D?
