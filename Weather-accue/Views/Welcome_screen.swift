@@ -12,6 +12,7 @@ struct Welcome_screen: View {
     
     @EnvironmentObject var locationManager: LocationManager
     
+    
     var body: some View {
         VStack{
             VStack(spacing: 20){

@@ -11,11 +11,27 @@ struct ContentView: View {
     
     @StateObject var locationManager = LocationManager()
     
+    var weatherManager = WeatherManager()
+    @State var weather: WeatherModel?
+    
     var body: some View {
         VStack {
             
             if let location = locationManager.location{
-                Text("Your Current Location Corrdinates Let is \(location.latitude) And Long is \(location.longitude)")
+                
+                if let weather = weather {
+                    Text("Weather Data Fetched !!")
+                }else{
+                    LoadingScreen()
+                        .task {
+                            do {
+                                weather =  try await weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+                            } catch{
+                                print("Error Getting Data :- \(error)")
+                            }
+                        }
+                }
+                
             } else {
                 if locationManager.isLoading{
                     LoadingScreen()
