@@ -1,0 +1,45 @@
+
+{
+    "coord": {
+        "lon": 72.9128,
+        "lat": 20.3941
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 301.76,
+        "feels_like": 306.45,
+        "temp_min": 301.76,
+        "temp_max": 301.76,
+        "pressure": 1003,
+        "humidity": 78,
+        "sea_level": 1003,
+        "grnd_level": 1001
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.14,
+        "deg": 211,
+        "gust": 9.45
+    },
+    "clouds": {
+        "all": 68
+    },
+    "dt": 1718818318,
+    "sys": {
+        "country": "IN",
+        "sunrise": 1718756923,
+        "sunset": 1718805043
+    },
+    "timezone": 19800,
+    "id": 7279741,
+    "name": "Vapi",
+    "cod": 200
+}
