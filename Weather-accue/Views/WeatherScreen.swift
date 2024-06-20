@@ -12,7 +12,9 @@ struct WeatherScreen: View {
     var weather: WeatherModel
     
     var body: some View {
+        //MARK: 3 Dimentional View For Use ZStack
         ZStack(alignment: .leading) {
+            //MARK: Heading Current Location With Current Date Stack
             VStack {
                 VStack(alignment: .leading, spacing: 5) {
                     Text(weather.name )
@@ -23,9 +25,9 @@ struct WeatherScreen: View {
                         .fontWeight(.light)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                
+            
                 Spacer()
-                
+                //MARK: Cloud Or Current Temp
                 VStack {
                     HStack {
                         VStack(spacing: 20) {
@@ -47,6 +49,7 @@ struct WeatherScreen: View {
                     Spacer()
                         .frame(height:  50)
                     
+                    //MARK: Temp Image For UI Design
                     AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2015/11/17/02/18/hourglass-1046841_1280.png")) { image in
                         image
                             .resizable()
@@ -62,7 +65,7 @@ struct WeatherScreen: View {
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
-            
+            //MARK: Container For 4 Mini Widgets
             VStack {
                 Spacer()
                 VStack(alignment: .leading, spacing: 20) {
@@ -90,6 +93,7 @@ struct WeatherScreen: View {
                 .cornerRadius(20, corners: [.topLeft, .topRight])
             }
         }
+        //MARK: Ignore Area From Bottom Colour Or Dark Theam
         .edgesIgnoringSafeArea(.bottom)
         .background(Color.indigo)
         .preferredColorScheme(.dark)

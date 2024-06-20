@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoadingScreen: View {
     var body: some View {
+        //MARK: Loading Screen For ProgressView
         ProgressView()
             .progressViewStyle(.circular)
             .tint(Color.white)

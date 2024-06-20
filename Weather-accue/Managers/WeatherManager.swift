@@ -11,7 +11,7 @@ import CoreLocation
 
 class WeatherManager {
     
-    
+    //MARK: Function To Get Data From API -------->>>>>>>>>
     func getCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) async throws -> WeatherModel {
         
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(APIManager.apiKey)") else { fatalError("Missing Or Invaid URL")}

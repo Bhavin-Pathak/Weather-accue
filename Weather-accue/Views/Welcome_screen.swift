@@ -10,6 +10,7 @@ import CoreLocationUI
 
 struct Welcome_screen: View {
     
+    //MARK: Envobject for locationManager Class
     @EnvironmentObject var locationManager: LocationManager
     
     
@@ -21,11 +22,9 @@ struct Welcome_screen: View {
                     .font(.title)
                 Text("Please share your current location to get current weather in your area")
                     .padding()
-                
-                
             }
             .multilineTextAlignment(.center)
-            
+            //MARK: Get Current Location Button
             LocationButton(.shareCurrentLocation){
                 locationManager.requestLocation()
             }

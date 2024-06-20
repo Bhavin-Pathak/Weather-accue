@@ -13,19 +13,19 @@ struct WeatherModel: Decodable {
     var main: MainResponse
     var name: String
     var wind: WindResponse
-    
+    //MARK: Cordinates
     struct CoordinatesResponse: Decodable {
         var lon: Double
         var lat: Double
     }
-    
+    //MARK: Weather
     struct WeatherResponse: Decodable {
         var id: Double
         var main: String
         var description: String
         var icon: String
     }
-    
+    //MARK: Main
     struct MainResponse: Decodable {
         var temp: Double
         var feels_like: Double
@@ -34,7 +34,7 @@ struct WeatherModel: Decodable {
         var pressure: Double
         var humidity: Double
     }
-    
+    //MARK: Wind
     struct WindResponse: Decodable {
         var speed: Double
         var deg: Double

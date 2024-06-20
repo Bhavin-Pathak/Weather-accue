@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    //MARK: Satates Objects or Variables
     @StateObject var locationManager = LocationManager()
     var weatherManager = WeatherManager()
     @State var weather: WeatherModel?
@@ -17,9 +17,12 @@ struct ContentView: View {
         VStack {
             if let location = locationManager.location{
                 if let weather = weather {
+                    //MARK: Weather Get Location Then Move To Weather Screen
                     WeatherScreen(weather: weather)
                 } else {
+                    //MARK: Show Loading Or ProgressView
                     LoadingScreen()
+                    //MARK: Performing Task With Loading View
                         .task {
                             do {
                                 weather =  try await weatherManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
@@ -37,6 +40,7 @@ struct ContentView: View {
                 }
             }
         }
+        //MARK: Background Colour Or Dark Mode
         .background(Color.indigo)
         .preferredColorScheme(.dark)
     }
